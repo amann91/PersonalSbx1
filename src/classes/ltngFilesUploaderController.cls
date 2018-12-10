@@ -8,7 +8,7 @@ public class ltngFilesUploaderController {
     public static List<String> getDocType(Id objRecordId) {
         List<String> options = new List<String> ();
         Schema.SObjectType objectType = objRecordId.getSobjectType();
-        
+        System.debug('Debugging Mode!');
         String noneLabel = '--None--';
         options.add(noneLabel);
         
