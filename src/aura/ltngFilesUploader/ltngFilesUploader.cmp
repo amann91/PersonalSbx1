@@ -1,0 +1,40 @@
+<aura:component implements="force:hasRecordId,flexipage:availableForRecordHome" controller="ltngFilesUploaderController">
+<!--
+ @description Files upload component
+ @author Allen Mann, Slalom
+ @date 07/02/2018
+ -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="contentVersionObj" type="ContentVersion" default="{'sobjectType':'ContentVersion','Document_Type__c':''}" />
+    <aura:attribute name="uploadedFiles" type="Object[]" />
+	<aura:attribute name="errorMsg" type="String" />
+
+
+    <lightning:card >
+        <aura:set attribute="title">
+            <lightning:icon iconName="utility:attach" variant="attach" size="small" /> Attach File(s)
+        </aura:set>
+        <aura:set attribute="footer">
+            
+        </aura:set>
+        <aura:set attribute="actions">
+            <!--<lightning:button label="New"/>-->
+        </aura:set>
+        <p class="slds-p-horizontal--small">
+            <ui:inputSelect aura:id="DynamicDocType" 
+							label="File Type" 
+							class="dynamic" 
+							value="{!v.contentVersionObj.Document_Type__c}" 
+							click="{! c.handlePicklistClick }" 
+							required="true" />
+			<br></br>
+            <lightning:fileUpload aura:id="uploadComponent"
+                                  multiple="true" 
+								  accept=".pdf, .png, .xlsx, .docx, .gif, .jpeg, .doc, .txt, .ppt, .xlsm, .zip, .msg, .csv" 
+								  recordId="{!v.recordId}" 
+								  onuploadfinished="{!c.handleUploadFinished}" />
+
+        </p>
+
+    </lightning:card>
+</aura:component>

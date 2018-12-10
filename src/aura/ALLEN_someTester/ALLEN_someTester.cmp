@@ -1,0 +1,43 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute type="String" name="valueToChange"></aura:attribute>
+    <aura:attribute type="String" name="valueHasBeenChanged"></aura:attribute>
+    <lightning:input label="Insert Something to Change Here" value="{!v.valueToChange}"></lightning:input>
+    <lightning:button label="vv - Copy - vv" variant="neutral" onclick="{!c.doSomethingOnClick}"></lightning:button>
+    <lightning:input aura:id="changed" label="Changed value" value="{!v.valueHasBeenChanged}"></lightning:input>
+    
+    <hr></hr>
+    
+    <h1>An Accordion Example</h1>
+    <lightning:accordion activeSectionName="B">
+        <lightning:accordionSection name="A" label="Accordion Title A">This is the content area for section A</lightning:accordionSection>
+        <lightning:accordionSection name="B" label="Accordion Title B">This is the content area for section B</lightning:accordionSection>
+        <lightning:accordionSection name="C" label="Accordion Title C">This is the content area for section C</lightning:accordionSection>
+    </lightning:accordion>
+    
+    <hr></hr>
+    
+    <h1>Accorion Example 2</h1>
+    <lightning:accordion >
+        <lightning:accordionSection label="Accordion Title A" name="A">This is the content area for section A
+            <aura:set attribute="actions">
+                <lightning:buttonMenu aura:id="menu" alternativeText="Show menu">
+                    <lightning:menuItem value="New" label="Menu Item One" />
+                </lightning:buttonMenu>
+            </aura:set>
+        </lightning:accordionSection>
+        <lightning:accordionSection label="Accordion Title B" name="B">This is the content area for section B</lightning:accordionSection>
+        <lightning:accordionSection label="Accordion Title C" name="C">This is the content area for section C</lightning:accordionSection>
+    </lightning:accordion>
+    
+    <hr></hr>
+    <h1>Lightining Card Example</h1>
+    <lightning:card title="Card Header" iconName="standard:account" footer="Card Footer">
+        <aura:set attribute="actions">
+            <lightning:button label="New"/>
+        </aura:set>
+        <p class="slds-p-horizontal_small">
+            Card Body
+        </p>
+    </lightning:card>
+    <hr></hr>
+</aura:component>

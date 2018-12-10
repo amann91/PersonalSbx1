@@ -1,0 +1,9 @@
+<apex:page >
+    <div>
+        <li>{!$User.FirstName}</li>
+        <li>{!$User.LastName}</li>
+        <li>{!$User.Email}</li>
+        <li>{!$User.Phone}</li>
+        <li>{!$User.Title}</li>
+    </div>
+</apex:page>

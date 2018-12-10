@@ -1,0 +1,43 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" controller="CrewCompTrackingController">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:registerEvent name="finishedEvent" type="c:Finished"/>   
+    <aura:handler event="c:Finished" action="{!c.iterationLoaded}"/>
+    
+    <aura:attribute name="customers" type="List"/>
+    <aura:attribute name="crewComps" type="Crew_Member_Competency__c[]"/>   
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="crewNames" type="List"/>
+    <aura:attribute name="tableData" type="String"/>
+    <aura:attribute name="richtext" type="String"/>
+    
+    
+    <ltng:require scripts="{!$Resource.chartjs}"
+                  afterScriptsLoaded="{!c.afterScriptsLoaded}"/>
+    
+    <aura:attribute name="ready" type="Boolean" default="false"/>
+    
+    
+    
+    <table class="slds-table slds-table_col-bordered slds-no-row-hover" style="margin-left: 250px;display:inline-block;">
+        
+        <tbody>
+            <!--Matrix data output-->
+            <aura:unescapedHtml value="{!v.richtext}" />
+        </tbody>
+    </table>    
+    
+   <div class="crewList">
+    <table class="slds-table slds-table_bordered slds-table_col-bordered" style="display:inline-block;z-index: -1; position:relative;">
+        <tbody>
+            <aura:iteration items="{!v.crewNames}" var="names" indexVar="key">
+                <tr>
+                    <td>
+                        <div style=""><a href="javascript:void(0);">{!names}</a></div>
+                    </td>
+                </tr>
+            </aura:iteration>
+        </tbody>
+    </table>
+    </div>
+</aura:component>

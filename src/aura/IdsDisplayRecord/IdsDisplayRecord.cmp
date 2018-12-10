@@ -1,0 +1,35 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId"> <!--inherit recordId attribute-->
+
+<aura:attribute name="record" type="Object" 
+  description="The record object to be displayed"/>
+<aura:attribute name="simpleRecord" type="Object" 
+  description="A simplified view record object to be displayed"/>
+<aura:attribute name="recordError" type="String" 
+  description="An error message bound to force:recordData"/>
+
+<force:recordData aura:id="record"
+    layoutType="FULL"
+    recordId="{!v.recordId}"
+    targetError="{!v.recordError}"
+    targetRecord="{!v.record}"
+    targetFields="{!v.simpleRecord}"
+    mode="VIEW"/>
+
+<!-- Display a header with details about the record -->
+<div class="slds-page-header" role="banner">
+    <p class="slds-text-heading--label">{!v.simpleRecord.Name}</p>
+    <h1 class="slds-page-header__title slds-m-right--small
+      lds-truncate slds-align-left">{!v.simpleRecord.BillingCity}, 
+      {!v.simpleRecord.BillingState}</h1>
+</div>
+
+<!-- Display Lightning Data Service errors, if any -->
+<aura:if isTrue="{!not(empty(v.recordError))}">
+    <div class="recordError">
+        <ui:message title="Error" severity="error" closable="true">
+            {!v.recordError}
+        </ui:message>
+    </div>
+</aura:if>
+
+</aura:component>

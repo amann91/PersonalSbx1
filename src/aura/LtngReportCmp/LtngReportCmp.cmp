@@ -1,0 +1,17 @@
+<aura:component controller="reportResponse" implements="force:appHostable,flexipage:availableForAllPageTypes" access="global">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="row" type="Object[]"/>
+    <aura:attribute name="isHeader" type="Boolean"/>
+
+    <tr>
+        <aura:iteration var="cell" items="{!v.row}">
+            <aura:renderIf isTrue="{!isHeader}">
+                <th class="cell">{!cell}</th>
+                    <aura:set attribute="else">
+                        <td class="cell">{!cell}"</td>
+                    </aura:set>
+            </aura:renderIf>
+        </aura:iteration>
+    </tr>
+
+</aura:component>

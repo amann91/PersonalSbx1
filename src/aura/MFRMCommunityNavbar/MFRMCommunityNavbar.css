@@ -1,0 +1,70 @@
+.THIS.c-container{
+    background-color: #FFFFFF;
+}
+.THIS .top-banner{
+    width: 100%;
+    height: 32px;
+}
+.THIS .topNav{
+    background-color: #333333;
+}
+.THIS .topNavMid{
+    background-color: #D63426;
+    padding-top: 5px;
+}
+.THIS .new-row{
+    max-width: 75rem;
+    margin-right: auto;
+    margin-left: auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+.THIS .mid-row{
+    padding: 18px 0;
+    border-bottom: 1px solid #cacaca;
+}
+.THIS .nav-list{
+    padding: 16px 0;
+    text-align: center;
+}
+.THIS .nav-item > a, .THIS .nav-item{
+    padding-bottom: 2px;
+    color: #323030;
+    font-family: "Gilroy Medium", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: color ease .3s, border ease .3s;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.THIS .header-banner-store{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none !important;
+    transition: background-color ease .3s;
+    cursor: pointer;
+}
+.THIS .header-banner-store > img{
+    display: inline-block;
+    max-width: 100%;
+    vertical-align: top;
+    padding-right: 6px;
+}
+.THIS .header-banner-store > p{
+    color: #FFFFFF;
+    font-family: "Gilroy", "Arial", sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    margin: 0;
+    text-decoration: none;
+    display: inline-block;
+}
+.THIS .red{
+    color: #D63426 !important;
+}

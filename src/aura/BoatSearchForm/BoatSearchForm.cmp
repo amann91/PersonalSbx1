@@ -1,0 +1,24 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="options" Type="List"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <lightning:layout horizontalAlign="center">
+        <div class="slds-grid">
+            <div class="slds-col">    
+                <lightning:select name="selectItem" label="" onchange="{!c.doSomething}">
+                    <option value="">All Types</option>
+                    <option value="1">one</option>
+                    <option value="2">two</option>
+                </lightning:select>
+            </div>
+            <div class="slds-col"> <lightning:button variant="brand" label="Search"/>
+                <lightning:button label="New" onclick="{!c.createNew}"/>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+    </lightning:layout>
+</aura:component>

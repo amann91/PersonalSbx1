@@ -1,0 +1,19 @@
+.THIS .tier-one {
+  background-color: #b3ffb3;
+}
+.THIS .tier-two {
+  background-color: #ffffcc;
+}
+.THIS .tier-three {
+  background-color: #e8e278;
+}
+.THIS .tier-four {
+  background-color: #ffb3b3;
+}
+
+.THIS.crewList{
+    position:absolute; 
+    top:316px;
+    left:49px;
+}
+/*etc*/

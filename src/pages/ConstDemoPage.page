@@ -1,0 +1,16 @@
+<apex:page controller="ConstructorDemo" standardStylesheets="false" applyBodyTag="false"
+>
+    <apex:slds />
+    <apex:form >
+        <div class="slds-scope">
+    <apex:pageBlock >
+        <apex:commandButton value="Call for Data" action="{!getCases}" reRender="listView"></apex:commandButton>
+        <apex:pageBlockTable id="listView" value="{!caseList}" var="c" styleClass="slds-table slds-table--bordered slds-table--cell-buffer">
+            <apex:column headerClass="slds-text-title_caps">{!c.Id}</apex:column>
+            <apex:column headerClass="slds-text-title_caps">{!c.Origin}</apex:column>
+            <apex:column headerClass="slds-text-title_caps">{!c.Subject}</apex:column>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+            </div>
+    </apex:form>
+</apex:page>

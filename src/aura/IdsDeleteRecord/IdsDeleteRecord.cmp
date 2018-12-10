@@ -1,0 +1,26 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
+
+<aura:attribute name="recordError" type="String" access="private"/>
+
+<force:recordData aura:id="recordHandler"
+  recordId="{!v.recordId}"
+  fields="Id"
+/>
+
+    <!-- Display Lightning Data Service errors, if any -->
+    <aura:if isTrue="{!not(empty(v.recordError))}">
+        <div class="recordError">
+            <ui:message title="Error" severity="error" closable="true">
+                {!v.recordError}
+            </ui:message>
+        </div>
+    </aura:if>
+
+    <!-- Display the delete record form -->
+    <div class="slds-form-element">
+        <lightning:button label="Delete Record"
+            onclick="{!c.handleDeleteRecord}"
+            variant="brand" />
+    </div>
+
+</aura:component>

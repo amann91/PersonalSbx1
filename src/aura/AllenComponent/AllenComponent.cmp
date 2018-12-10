@@ -1,0 +1,11 @@
+<aura:component >
+	<div class="slds-form-element">
+		<label class="slds-form-element__label" for="input-unique-id">Form Label</label>
+			<div class="slds-form-element__control">
+				<ui:inputText aura:id="message" placeholder="Enter String"/>
+			</div>
+	</div>
+<ui:button label="Click me!" press="{!c.doStuff}"/>
+<br />
+<ui:outputText aura:id="outputMessage" value=""/>
+</aura:component>

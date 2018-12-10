@@ -1,0 +1,137 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+    <div class="c-container">
+        <lightning:layout horizontalAlign="space" multipleRows="false" class="top-banner">
+            <lightning:layoutItem padding="around-small" size="5" class="topNav" >
+                <div class="custom-box">1</div>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="2" class="topNavMid" >
+                    <a href="https://www.mattressfirm.com/stores/" class="header-banner-store">
+                        <img src="https://cdn-us-cf2.yottaa.net/58b57556312e58477f00001c/www.mattressfirm.com/v~23.1b/on/demandware.static/Sites-Mattress-Firm-Site/-/default/dwacf748ad/images/header/Location.svg?yocs=1Y_21_&amp;yoloc=us" alt="location icon" title="location icon" data-yo-delaytype="lazy" data-yo-src="https://cdn-us-cf2.yottaa.net/58b57556312e58477f00001c/www.mattressfirm.com/v~23.1b/on/demandware.static/Sites-Mattress-Firm-Site/-/default/dwacf748ad/images/header/Location.svg?yocs=1Y_21_&amp;yoloc=us" data-yo-loaded="true"/>
+                        <p>
+                            Find a Store Near
+                        </p>
+                    </a>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-small" size="5" class="topNav" >
+                <div class="custom-box">3</div>
+            </lightning:layoutItem>
+        </lightning:layout>
+        <!--Next Row-->
+        <lightning:layout horizontalAlign="space" multipleRows="false" class="new-row mid-row">
+            <lightning:layoutItem padding="around-small" size="4" >
+                <a class="logo" href="{!v.DemandwareLink}">
+                    <img style="width: 228px;height: 32px;" src="{!$Resource.mfrmimages + '/mattressfirm-logo.svg'}" alt="Mattress Firm, save money sleep happy" title="Mattress Firm, save money sleep happy"/>
+                </a>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="4">
+                <!--div class="header-search">
+                    <ui:inputText aura:id="searchText" placeholder="Search Products" class="valid searchIco" keyup="{!c.doProductSearch}"/>
+                    <button class="search-btn" onclick="{!c.doProductSearch}">
+                        <img class="ico" src="https://cdn-us-cf2.yottaa.net/58b57556312e58477f00001c/www.mattressfirm.com/v~22.1b/on/demandware.static/Sites-Mattress-Firm-Site/-/default/dw42f4a1d3/images/header/Search.svg?yocs=1Y_21_&amp;yoloc=us" alt="Search Mattress Firm" title="Search" data-yo-delaytype="lazy" data-yo-src="https://cdn-us-cf2.yottaa.net/58b57556312e58477f00001c/www.mattressfirm.com/v~22.1b/on/demandware.static/Sites-Mattress-Firm-Site/-/default/dw42f4a1d3/images/header/Search.svg?yocs=1Y_21_&amp;yoloc=us" data-yo-loaded="true"/>
+                    </button>
+                </div-->
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-small" size="2" >
+                Icon1
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-small" size="2">
+                Icon2
+            </lightning:layoutItem>
+        </lightning:layout>
+        <!--Next Row-->
+        <lightning:layout horizontalAlign="space" multipleRows="false" class="new-row">
+            <lightning:layoutItem padding="around-small" >
+                <div class="nav-item">
+                    <a>Mattresses</a>
+                </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-small" >
+                <div class="nav-item">
+                    <a>Beds &amp; Frames</a>
+                </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-small" >
+                <div class="nav-item">
+                    <a>Bedding</a>
+                </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-small" >
+                <div class="nav-item">
+                    <a>Pillows</a>
+                </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-small" >
+                <div class="nav-item">
+                    <a>Furniture</a>
+                </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-small" >
+                <div class="nav-item">
+                    <a>Baby &amp; Toddler</a>
+                </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-small" >
+                <div class="nav-item">
+                    <a class="red">Sale</a>
+                </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-small">
+                <div class="nav-item">
+                    <a>Resources</a>
+                </div>
+            </lightning:layoutItem>
+        </lightning:layout>
+        <!--lightning:layout horizontalAlign="space">
+            <lightning:layoutItem padding="around-small">
+                <div class="custom-box">1</div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-small">
+                <div class="custom-box">2</div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-small">
+                <div class="custom-box">3</div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-small">
+                <div class="custom-box">4</div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-small">
+                <div class="custom-box">5</div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-small">
+                <div class="custom-box">6</div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-small">
+                <div class="custom-box">7</div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-small">
+                <div class="custom-box">8</div>
+            </lightning:layoutItem>
+        </lightning:layout-->
+        <!--div class="slds-grid slds-wrap new-row">
+            <div class="slds-col slds-size_1-of-8">
+                <span class="nav-item">Mattresses</span>
+            </div>
+            <div class="slds-col slds-size_1-of-8">
+                <span class="nav-item">Beds &amp; Frames</span>
+            </div>
+            <div class="slds-col slds-size_1-of-8">
+                <span class="nav-item">Bedding</span>
+            </div>
+            <div class="slds-col slds-size_1-of-8">
+                <span class="nav-item">Pillows</span>
+            </div>
+            <div class="slds-col slds-size_1-of-8">
+                <span class="nav-item">Furniture</span>
+            </div>
+            <div class="slds-col slds-size_1-of-8">
+                <span class="nav-item">Baby &amp; Toddler</span>
+            </div>
+            <div class="slds-col slds-size_1-of-8">
+                <span class="nav-item">Sale</span>
+            </div>
+            <div class="slds-col slds-size_1-of-8">
+                <span class="nav-item">Resources</span>
+            </div>
+        </div-->
+    </div>
+</aura:component>
